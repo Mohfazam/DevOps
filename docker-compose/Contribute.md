@@ -1,5 +1,6 @@
+# Installation
 
-# Manual Installation  
+## Manual Installation  
 
     - Install nodejs locally
     - Clone the repo
@@ -19,3 +20,5 @@
       - docker run -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
     - Build the Image - `docker build -t user-projecct .`
     - Start the image - `docker run -p 3000:3000 user-project`
+  
+## Docker Compose
