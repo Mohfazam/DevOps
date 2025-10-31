@@ -5,6 +5,8 @@ services:
     image: postgres
     ports:
       - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
 
 
   user_app:
@@ -12,13 +14,12 @@ services:
       network: host
       context: ./
       dockerfile: Dockerfile
-      depends_on:
-        postgres:
-          condition: service_completed_successfully
   
 
     environment:
-      - DATABSE_URL=postgresql://postgres:mysecretpassword@postgres:5432/postgres
+      - DATABASE_URL=postgresql://postgres:mysecretpassword@postgres:5432/postgres
 
     ports:
       - 3000:3000
+    depends_on:
+      - postgres
