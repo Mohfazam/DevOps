@@ -23,4 +23,8 @@
     - Build the Image - `docker build --network=host -t user-project .`
     - Start the image - `docker run -e DATABSE_URL=postgresql://postgres:mysecretpassword@postgres:5432/postgres --network user_project -p 3000:3000 user-project`
   
-## Docker Compose
+## Docker Compose installation steps\
+
+- install docker, docker-compose
+- Run `docker-compose up`
+  
